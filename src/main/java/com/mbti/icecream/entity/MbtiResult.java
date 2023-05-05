@@ -1,10 +1,7 @@
 package com.mbti.icecream.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
@@ -13,7 +10,7 @@ import java.sql.Timestamp;
 @Table(name = "MBTI_RESULT")
 @Getter
 @Setter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)  //IDE단계에서 필수값 누락을 막을 수 있음.
 @AllArgsConstructor
 public class MbtiResult {
     @Id
@@ -25,4 +22,5 @@ public class MbtiResult {
 
     @CreationTimestamp
     private Timestamp createDate;
+
 }

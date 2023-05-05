@@ -10,12 +10,12 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "MBTI_INFO")
+@Table(name = "MBTI_RESULT")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Info {
+public class MbtiResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

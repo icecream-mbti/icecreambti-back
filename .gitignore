@@ -38,3 +38,5 @@ out/
 
 ## properties ##
 application-dev.properties
+
+.DS_Store

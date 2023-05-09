@@ -5,11 +5,11 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "MBTI_RESULT")
-@Getter
-@Setter
+@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)  //IDE단계에서 필수값 누락을 막을 수 있음.
 @AllArgsConstructor
 public class MbtiResult {
@@ -17,7 +17,7 @@ public class MbtiResult {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column
     private String result;
 
     @CreationTimestamp

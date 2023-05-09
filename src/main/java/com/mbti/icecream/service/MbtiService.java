@@ -1,6 +1,7 @@
 package com.mbti.icecream.service;
 
 import com.mbti.icecream.dto.MbtiDto;
+import com.mbti.icecream.entity.MbtiResult;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,6 +29,8 @@ public class MbtiService {
             mbtiDto.setMbti4("J");
         }
         String result = mbtiDto.getMbti1() + mbtiDto.getMbti2() + mbtiDto.getMbti3() + mbtiDto.getMbti4();
-        return result;
+        mbtiDto.setResult(result);
+
+        return result;  //이 값을 DB result로 저장
     }
 }

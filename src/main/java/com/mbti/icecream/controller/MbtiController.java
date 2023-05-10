@@ -16,8 +16,8 @@ public class MbtiController {
     @Autowired
     MbtiRepository mbtiRepository;
 
-    @PostMapping("/result")
-    public String calmbti(MbtiDto mbtiDto){
+    @PostMapping(value = "/result")
+    public String calmbti(@RequestBody MbtiDto mbtiDto){
         // dto로 받아온 데이터로 service한테 mbti를 계산하게 하고, 결과 값을 받아옴.
         String result = mbtiService.calResult(mbtiDto);
 
